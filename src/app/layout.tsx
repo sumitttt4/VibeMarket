@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Instrument_Serif } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // Primary Typography - Inter (UI/Body)
@@ -113,6 +114,7 @@ export default function RootLayout({
 
         {/* Main Content */}
         <div className="relative min-h-screen">{children}</div>
+        <Analytics />
       </body>
     </html>
   );
